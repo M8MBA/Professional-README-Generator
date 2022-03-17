@@ -5,7 +5,7 @@ const Choices = require('inquirer/lib/objects/choices');
 
 
 // TODO: Create an array of questions for user input
-const questions = [
+const promptUser = () => [
   {
     type: 'input',
     name: 'Title',
