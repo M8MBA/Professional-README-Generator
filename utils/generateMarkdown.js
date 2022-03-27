@@ -43,7 +43,7 @@ function renderLicenseSection(license) {
     licenseSection = ''
   } else {
     licenseSection =
-    `License: ${license} `
+    `License ${license} `
   }
   return licenseSection;
 }
@@ -51,9 +51,11 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  
+  ## ${renderLicenseBadge(data.license)}  
 
-  ## ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
-  ### ${renderLicenseLink(data.license)}
+  ## Description
+  ${data.description}
 
   ## Table of Contents:
   ###  * [Installation](#installation)
@@ -63,21 +65,24 @@ function generateMarkdown(data) {
   ###  * [Tests](#tests)
   ###  * [Questions](#questions)
 
-  ## Installation:
+  ## Installation
   ### You must install the following for this app to function:
   ### ${data.installation}
 
-  ## Usage:
+  ## Usage
   ### ${data.usage}
 
-  ## Contributors:
+  ## Contributors
   ### ${data.contributing}
 
-  ## Tests:
+  ## ${renderLicenseSection(data.license)} 
+  ### ${renderLicenseLink(data.license)}
+
+  ## Tests
   ### Run the following commands in your terminal to test this app:
   ### ${data.tests}
 
-  ## Questions:
+  ## Questions
   ### If you have any questions, please contact me at
   ### Github: https://github.com/${data.git}
   ### or
