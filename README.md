@@ -22,7 +22,7 @@
   ### Install inquirer
   ### Invoke the app by running > node index.js in the command line
   ### answer the questions and once you are done a file named generatedREADME.md will be available in the utils folder
-  ### VIDEO.mp4
+  ### Walkthrough Video - https://youtu.be/EVkQgzAXPrQ
 
   ## Contributors
   ### Inquirer.js https://github.com/SBoudrias/Inquirer.js
